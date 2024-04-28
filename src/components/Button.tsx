@@ -3,18 +3,16 @@ import { COLORS_PALETTE } from "../colors";
 import { CommonComponentProps } from "../types";
 
 export const Button = styled.button<CommonComponentProps>`
+    cursor: pointer;
     height: ${(props) => props.$height};
     width: ${(props) => props.$width};
 `;
 
 export const PrimaryButton = styled(Button)<CommonComponentProps>`
+    border: none;
     border-radius: 8px;
     background-color: ${COLORS_PALETTE.violet.primary};
     color: #fff;
-
-    &:active {
-        background-color: ${COLORS_PALETTE.violet.two};
-    }
 
     &:hover {
         background-color: ${COLORS_PALETTE.violet.four};
@@ -23,6 +21,10 @@ export const PrimaryButton = styled(Button)<CommonComponentProps>`
     &:disabled {
         background-color: ${COLORS_PALETTE.violet.ten};
         color: ${COLORS_PALETTE.violet.eight};
+    }
+
+    &:active {
+        background-color: ${COLORS_PALETTE.violet.two};
     }
 `;
 
@@ -53,10 +55,6 @@ export const TertiaryButton = styled(Button)<CommonComponentProps>`
     background-color: #fff;
     color: ${COLORS_PALETTE.violet.primary};
 
-    &:active {
-        color: ${COLORS_PALETTE.violet.two};
-    }
-
     &:disabled {
         color: ${COLORS_PALETTE.violet.eight};
     }
@@ -64,5 +62,9 @@ export const TertiaryButton = styled(Button)<CommonComponentProps>`
     &:hover {
         color: ${COLORS_PALETTE.violet.primary};
         text-shadow: 2px 4px 10px #5206e9;
+    }
+
+    &:active {
+        color: ${COLORS_PALETTE.violet.two};
     }
 `;
