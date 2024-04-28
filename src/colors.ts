@@ -11,7 +11,12 @@ export type ColorVariant = {
     ten: string;
 };
 
-export type ColorsPalette = Record<string, ColorVariant>
+export type ColorsPalette = Record<string, ColorVariant>;
+
+export const BLACK_DISABLED = "#F5F5F5";
+export const WHITE = "#FFF";
+export const BOX_SHADOW_COLOR = "#5206e933";
+export const TEXT_SHADOW_COLOR = "#5206e9";
 
 export const COLORS_PALETTE: ColorsPalette = {
     violet: {

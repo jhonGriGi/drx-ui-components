@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { COLORS_PALETTE } from "../colors";
+import { BOX_SHADOW_COLOR, COLORS_PALETTE, TEXT_SHADOW_COLOR, WHITE } from "../colors";
 import { CommonComponentProps } from "../types";
 
 export const Button = styled.button<CommonComponentProps>`
@@ -8,11 +8,11 @@ export const Button = styled.button<CommonComponentProps>`
     width: ${(props) => props.$width};
 `;
 
-export const PrimaryButton = styled(Button)<CommonComponentProps>`
+export const DrxPrimaryButton = styled(Button)<CommonComponentProps>`
     border: none;
     border-radius: 8px;
     background-color: ${COLORS_PALETTE.violet.primary};
-    color: #fff;
+    color: ${WHITE};
 
     &:hover {
         background-color: ${COLORS_PALETTE.violet.four};
@@ -28,15 +28,15 @@ export const PrimaryButton = styled(Button)<CommonComponentProps>`
     }
 `;
 
-export const SecondaryButton = styled(Button)<CommonComponentProps>`
+export const DrxSecondaryButton = styled(Button)<CommonComponentProps>`
     border-radius: 8px;
-    background-color: #fff;
+    background-color: ${WHITE};
     border: 1.5px solid ${COLORS_PALETTE.violet.primary};
     color: ${COLORS_PALETTE.violet.primary};
 
     &:active {
         background-color: ${COLORS_PALETTE.violet.two};
-        color: #fff;
+        color: ${WHITE};
     }
 
     &:disabled {
@@ -45,14 +45,14 @@ export const SecondaryButton = styled(Button)<CommonComponentProps>`
     }
 
     &:hover {
-        box-shadow: #5206e933 2px 4px 10px 0;
+        box-shadow: ${BOX_SHADOW_COLOR} 2px 4px 10px 0;
         transition: box-shadow 0.3s ease;
     }
 `;
 
-export const TertiaryButton = styled(Button)<CommonComponentProps>`
+export const DrxTertiaryButton = styled(Button)<CommonComponentProps>`
     border: none;
-    background-color: #fff;
+    background-color: ${WHITE};
     color: ${COLORS_PALETTE.violet.primary};
 
     &:disabled {
@@ -61,7 +61,7 @@ export const TertiaryButton = styled(Button)<CommonComponentProps>`
 
     &:hover {
         color: ${COLORS_PALETTE.violet.primary};
-        text-shadow: 2px 4px 10px #5206e9;
+        text-shadow: 2px 4px 10px ${TEXT_SHADOW_COLOR};
     }
 
     &:active {
